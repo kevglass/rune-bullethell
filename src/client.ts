@@ -41,6 +41,8 @@ function render() {
     }
     ctx.restore();
 
+    ctx.fillStyle = "rgba(0,0,0,0.7)";
+    ctx.fillRect(0,0,500,25);
     ctx.fillStyle = "white";
     ctx.font = "20px Arial";
     ctx.fillText("BULLETS: " + currentGame.bullets.length + " FPS: " + fps, 10, 20);
