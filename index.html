@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Tic Tac Toe</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #gamecanvas {
+        position:absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="gamecanvas" width="500" height="500">
+      
+    </canvas>
+    <script type="module" src="/src/logic.ts"></script>
+    <script type="module" src="/src/client.ts"></script>
+  </body>
+</html>
