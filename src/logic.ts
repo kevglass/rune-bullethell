@@ -10,7 +10,6 @@ export type Bullet = {
   radius: number;
   vx: number;
   vy: number;
-  id: number;
 }
 
 export type Target = {
@@ -23,7 +22,6 @@ export type Target = {
 export interface GameState {
   targets: Target[];
   bullets: Bullet[];
-  nextId: number;
 }
 
 type GameActions = {
@@ -36,7 +34,6 @@ declare global {
 
 function createBullet(game: GameState) {
   game.bullets.push({
-    id: game.nextId++,
     x: 20 + (Math.random() * 60),
     y: 20 + (Math.random() * 60),
     radius: (Math.random() * 1) + 1,
@@ -79,8 +76,7 @@ Rune.initLogic({
   setup: () => {
     const state: GameState = {
       targets: [],
-      bullets: [],
-      nextId: 1
+      bullets: []
     }
 
     const step = Math.ceil(Math.sqrt(TARGET_COUNT));
